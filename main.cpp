@@ -19,11 +19,6 @@
 
 using namespace std;
 
-/*
- * 
- */ 
-
-
 int main(int argc, char** argv) {
 
     Vertex p, q, r, s;
@@ -33,21 +28,19 @@ int main(int argc, char** argv) {
     LOG(s);
 
     std::vector<Vertex> v;
-    v.reserve(4);
+    v.reserve(60);
     
     v.push_back(p);
     v.push_back(q);
-  //  v.push_back(r);
-  //  v.push_back(s);
-    
-    LOG(v[0]);
-    LOG(v[1]);
-    LOG(v[2]);
-    LOG(v[3]);
-    Vertex z,w;
+    for (int i = 0; i < v.size(); i++) {
+        LOG(v[i]);
+    }
+
+    Vertex z,w,t;
 //    Mesh m;
     LOG(z);
     LOG(w);
+    LOG(t);
 //    cout << m;
           
 
