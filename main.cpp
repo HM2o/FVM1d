@@ -21,29 +21,13 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
-    Vertex p, q, r, s;
-    LOG(p);
-    LOG(q);
-    LOG(r);
-    LOG(s);
+    Mesh m;    
 
-    std::vector<Vertex> v;
-    v.reserve(60);
-    
-    v.push_back(p);
-    v.push_back(q);
-    for (int i = 0; i < v.size(); i++) {
-        LOG(v[i]);
+    for (int i = 0; i < m.size(); i++) {
+         cout << m[i].normal()[0].X() << " : " << m[i].normal()[1].X() << '\n';
     }
 
-    Vertex z,w,t;
-//    Mesh m;
-    LOG(z);
-    LOG(w);
-    LOG(t);
-//    cout << m;
-          
-
+    
     
     return 0;
 }

@@ -22,9 +22,10 @@ public:
     Problem(const Problem& orig) {}
     virtual ~Problem() {}
 
-    static const double X_0 = 0.0;
-    static const double X_1 = 1.0;
-    static const unsigned int N_E = 2;
+    static const double       X_0 = 0.5;
+    static const double       X_1 = 1.5;
+    static const unsigned int N_E = 200;
+    
 }; 
 
 #define LOG(x) std::cout << #x << " : " << x << std::endl;

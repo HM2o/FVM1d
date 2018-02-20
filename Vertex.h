@@ -24,12 +24,10 @@ public:
     Vertex() : _x(0.0) , refCount() {}
     Vertex(const Vertex& orig) : _x(orig.X()) {this->ID()=orig.ID(); this->operator --();}
     Vertex(double x) : _x(x)  {}    
-    ~Vertex() {}
+   ~Vertex() {}
     
     inline double X() const  {return _x;}
-    inline double & X() {return _x;}
-    
-    
+    inline double & X() {return _x;} 
     
     friend std::ostream& operator<< (std::ostream& os, const Vertex& v) {
         os << "V: " << v.ID() << ": " << v.X() << '\n';

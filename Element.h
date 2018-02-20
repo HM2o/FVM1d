@@ -15,28 +15,36 @@
 #define ELEMENT_H
 
 #include "Vertex.h"
+#include "Vector.h"
+#include <cmath>
 
 
 class Element : public refCount<Element> {
 public:
     Element() : refCount() {}
-//    Element(Element& orig) : refCount() {_V[0]=orig.mV()[0]; _V[1]=orig.mV()[1];}
-    Element( Vertex A,  Vertex B) : refCount() { this->mV(A,B); }
+    Element(Vertex A,  Vertex B) : refCount() { this->mV(A,B);    
+    }
     
-    void mV( Vertex& A,  Vertex& B) { _V[0]=A; _V[1]=B; }
-//    void mV( Vertex A,  Vertex B) { _V[0]=A; _V[1]=B; } -> Wrong member function leads to ambiguous calls
-
+    void mV(Vertex& A,  Vertex& B) { 
+        _V[0]=A;                   _V[1]=B;
+        _N[0]=Vector(A.X()-B.X()); _N[1]=Vector(B.X()-A.X());
+    }
+   
+    Vertex* mV()     {return _V;}
+    Vector* normal() {return _N;}
+    
+    inline double A() const {return std::abs(_V[0].X()-_V[1].X());} /* -> Added Area() */
     
     ~Element() {}
-    
-    Vertex* mV() {return _V;}
-    
+        
     friend std::ostream& operator<< (std::ostream& os, Element& e) {
         os << "E: " << e.ID() << ": [" << e.mV()[0].ID() << ": " << e.mV()[0].X() << " ... " << e.mV()[1].ID() << ": " << e.mV()[1].X() << "]\n"; 
         return os;
     }
+
 private:
     Vertex _V[2];
+    Vector _N[2];
 };
 
 

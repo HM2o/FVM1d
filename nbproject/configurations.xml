@@ -7,6 +7,7 @@
       <itemPath>Element.h</itemPath>
       <itemPath>Mesh.h</itemPath>
       <itemPath>Problem.h</itemPath>
+      <itemPath>Quantity.h</itemPath>
       <itemPath>Vector.h</itemPath>
       <itemPath>Vertex.h</itemPath>
       <itemPath>refCount.h</itemPath>
@@ -21,6 +22,8 @@
       <itemPath>Element.cpp</itemPath>
       <itemPath>Mesh.cpp</itemPath>
       <itemPath>Problem.cpp</itemPath>
+      <itemPath>Quantity.cpp</itemPath>
+      <itemPath>Vector.cpp</itemPath>
       <itemPath>Vertex.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>refCount.cpp</itemPath>
@@ -58,6 +61,12 @@
       <item path="Problem.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Problem.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Quantity.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Quantity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Vector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Vector.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -103,6 +112,12 @@
       <item path="Problem.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Problem.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Quantity.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Quantity.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Vector.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Vector.h" ex="false" tool="3" flavor2="0">
       </item>

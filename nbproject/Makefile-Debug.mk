@@ -38,6 +38,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Element.o \
 	${OBJECTDIR}/Mesh.o \
 	${OBJECTDIR}/Problem.o \
+	${OBJECTDIR}/Quantity.o \
+	${OBJECTDIR}/Vector.o \
 	${OBJECTDIR}/Vertex.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/refCount.o
@@ -81,6 +83,16 @@ ${OBJECTDIR}/Problem.o: Problem.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Problem.o Problem.cpp
+
+${OBJECTDIR}/Quantity.o: Quantity.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Quantity.o Quantity.cpp
+
+${OBJECTDIR}/Vector.o: Vector.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Vector.o Vector.cpp
 
 ${OBJECTDIR}/Vertex.o: Vertex.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -24,13 +24,10 @@
 class Mesh : public refCount<Mesh> {
 public:
     Mesh() : refCount() {
-    //    Elements.reserve(Problem::N_E);
-    setMesh();
+    this->setMesh();
     }
         
-    ~Mesh() {
-
-    }
+    ~Mesh() {}
    
     Element& operator[](int i) {
         return Elements[i];
@@ -43,14 +40,11 @@ public:
         os << "size = " << size << '\n';
         for (int i = 0; i < size; i++) 
             os << mesh[i]; 
-        LOG(mesh.size());
         return os; 
     }
    
     
-    void setMesh() {
-        
-        //Elements.reserve(Problem::N_E);        
+    void setMesh() {       
         
         double DX = (Problem::X_1-Problem::X_0)/Problem::N_E;
         /*Vertices along the Path*/
@@ -67,7 +61,6 @@ public:
         e.mV(Vertices[i],Vertices[i+1]);
         Elements.push_back(e);
         }
-
 
     }
     
