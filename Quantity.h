@@ -14,15 +14,17 @@
 #ifndef QUANTITY_H
 #define QUANTITY_H
 
+#include <vector>
+
+#include "Problem.h"
+
 template <typename TOPO>
 class Quantity {
 public:
-    Quantity() {}
-    Quantity(const Quantity& orig) {}
+    Quantity() {_quantities.reserve(Problem::N_t+1);}    
     virtual ~Quantity() {}
 private:
-    TOPO _quantity;
-
+    std::vector<TOPO> _quantities;
 };
 
 #endif /* QUANTITY_H */

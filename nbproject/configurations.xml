@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>Element.h</itemPath>
       <itemPath>Mesh.h</itemPath>
+      <itemPath>Operations.h</itemPath>
       <itemPath>Problem.h</itemPath>
       <itemPath>Quantity.h</itemPath>
       <itemPath>Vector.h</itemPath>
@@ -58,6 +59,8 @@
       </item>
       <item path="Mesh.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Operations.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Problem.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Problem.h" ex="false" tool="3" flavor2="0">
@@ -108,6 +111,8 @@
       <item path="Mesh.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Mesh.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Operations.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Problem.cpp" ex="false" tool="1" flavor2="0">
       </item>
